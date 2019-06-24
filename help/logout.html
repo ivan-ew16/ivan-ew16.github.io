@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Logut</title>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+	      if(sessionStorage.getItem("user")){
+	      }
+	      else{
+	        window.location.href = "/index.html";
+	      }
+	      sessionStorage.clear();
+	      window.location.href = "/index.html";
+	    });
+	</script>
+</head>
+<body>
+
+</body>
+</html>

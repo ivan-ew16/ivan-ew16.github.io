@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type='text/javascript'
+  src='http://code.jquery.com/jquery-1.8.3.js'></script>
+<script type="text/javascript"
+  src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.js"></script>
+<link rel="stylesheet" type="text/css"
+  href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.css">
+<script type="text/javascript">
+  function login(){
+    var username = $("#username").val();
+    var temp = [];
+    if(username == "admin"){
+      temp.push({"username": username});
+      var items = JSON.stringify(temp);
+      sessionStorage.setItem("user", items);
+      window.location.href = "/help/index-login.html";
+    }
+  }
+</script>
+</head><!-- w  w w.j  av  a2 s  . c om-->
+<body>
+  <div id="page" data-role="page" data-theme="b">
+    <div data-role="content">
+      <h2>Login</h2>
+      <p align="right">
+        <a href="registration.html" id="showregistration">Don't have an
+          account? &rarr;</a>
+      </p>
+      <form method="post" id="loginForm">
+        <label for="password">Email:</label> 
+        <input class="required" type="text" name="username" id="username"
+          placeholder="username@server.com"> 
+        <label for="password">Password:</label>
+        <input class="required" type="password" name="password"
+          id="password" placeholder="password"> 
+        <input type="button"
+          value="Login" id="submitButton" onClick="login()">
+      </form>
+    </div>
+  </div>
+</body>
+</html>
