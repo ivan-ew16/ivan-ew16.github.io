@@ -98,7 +98,7 @@
         </form>
       </div>
       <center><div id="loader" style="border: 16px solid #f3f3f3;border-top: 16px solid blue;border-radius: 50%;width: 120px;height: 120px;animation: spin 2s linear infinite;"></div></center>
-      <center id="content" style="display: none;">
+      <center id="content" style="display: none;overflow: hidden;text-overflow: clip;white-space: pre-wrap;white-space: -moz-pre-wrap;">
         <div id="content-1" style="border: 1px solid black; width: 50vw; margin: 30px 10px 10px 10px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
         </div>
 
@@ -148,7 +148,7 @@
       document.getElementById("loader").style.display= 'none';
       console.log("saved");
     }else{
-      var request = new Request('https://newsapi.org/v2/everything?q=bitcoin&from=2019-05-24&sortBy=publishedAt&apiKey=f0c757cbf826400394bfc454ec04a403', {
+      var request = new Request('https://newsapi.org/v2/everything?q=bitcoin&from=2019-06-20&sortBy=publishedAt&apiKey=f0c757cbf826400394bfc454ec04a403', {
         method: 'GET', 
         mode: 'cors', 
       });
@@ -167,7 +167,7 @@
           }
           // items += "<div style='margin: 10px;text-align: left;'><button style='display: inline;'><i class='material-icons' style='color: blue;'>thumb_up_alt</i></button><p style='display: inline;'>10 likes</p><button style='display: inline;'><i class='material-icons'>chat_bubble_outline</i></button><p style='display: inline;'>2 comments</p></div>";
           items += "<div style='border: 1px solid black;border-radius: 10px;text-align: left;padding-left: 10px;'><h4><b>" + data.articles[i].title + "</b></h4><p>" + data.articles[i].description + "</p></div>";
-          items += "<div style='border: 1px solid black;border-radius: 10px;text-align: left;padding-left: 10px;'><p>Full News: <a href='" + data.articles[i].url + "'>" + data.articles[i].url + "</a></p></div>"
+          items += "<div style='border: 1px solid black;border-radius: 10px;text-align: left;padding-left: 10px;'><p>Full News: <a href='" + data.articles[i].url + "'>Link to Website!</a></p></div>"
           document.getElementById("content-"+(i+1)).innerHTML = items;
         }
         content.style.display = 'block';
