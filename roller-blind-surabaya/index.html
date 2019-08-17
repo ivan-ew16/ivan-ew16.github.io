@@ -41,8 +41,9 @@
   	  width: 100%;
   	}
     div.polaroid {
-      width: 200px;
-      height: 275px;
+      width: 17.25%;
+      max-width: 200px;
+      height: auto;
       background-color: white;
       border-radius: 8px;
       display: inline-block;
@@ -50,6 +51,70 @@
       margin-bottom: 25px;
       margin-top: 25px;
       margin-left: 10px;
+      font-size: .95rem
+
+    }
+    div.polaroid p{
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    div.polaroid img{
+      width:100% ;
+      height: 30vh
+    }
+    /* Big tablet to 1200px */
+      @media only screen and (max-width: 1200px) {
+        div.polaroid {
+          font-size: .9rem;
+
+        }  
+        div.polaroid img{
+          height: 25vh;
+        }        
+      }
+      @media only screen and (max-width: 1023px) {
+        div.polaroid {
+          font-size: .75rem;
+          width: 18%;  
+        }
+        div.polaroid img{
+          height: 20vh;
+        }
+        .carousel-control-next{
+          display: none;
+        }
+        .carousel-control-prev{
+          display: none;
+        }
+      }
+      @media only screen and (max-width: 767px) {
+        div.polaroid {
+          font-size: .65rem;
+
+        }
+        div.polaroid img{
+          height: 15vh;
+        }
+      }
+      @media only screen and (max-width: 480px) {
+        div.polaroid {
+          font-size: .55rem;
+
+        }
+        div.polaroid img{
+          height: 10vh;
+        }
+        .carousel-control-next{
+          display: none;
+        }
+        .carousel-control-prev{
+          display: none;
+        }
+      }
+    .overflow { 
+      white-space: nowrap;
+      overflow: hidden;
     }
 
     div.polaroid-container {
@@ -64,13 +129,13 @@
 
   <h1 class="site-heading text-center text-white d-none d-lg-block">
     <!-- <span class="site-heading-upper text-primary mb-3">A Free Bootstrap 4 Business Theme</span> -->
-    <span class="site-heading-upper mb-3"><img src="img/logo2.jpg" style="width: 350px;height: 100px; "></span>
+    <span class="site-heading-upper mb-3"><img src="img/logo2.png" style="width: 350px;height: 100px; "></span>
     <span class="site-heading-lower">Roller Blind & Gorden</span>
   </h1>
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light py-3 shadow-sm">
-  <a href="#" class="navbar-brand font-weight-bold d-block d-lg-none">MegaMenu</a>
+  <a href="#" class="navbar-brand font-weight-bold d-block d-lg-none" style="color: rgba(255, 255, 255, 0.7);">Roller Blind & Gorden</a>
   <button type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler">
           <span class="navbar-toggler-icon"></span>
   </button>
@@ -78,7 +143,6 @@
 		    <ul class="navbar-nav mx-auto">
 		      <!-- Megamenu-->
 		      <li class="nav-item"><a href="index.html" class="nav-link font-weight-bold text-uppercase" style="color: rgba(240, 255, 0, 0.7);">Home</a></li>
-		      <li class="nav-item"><a href="about.html" class="nav-link font-weight-bold text-uppercase" style="color: rgba(255, 255, 255, 0.7);">About</a></li>
 		      <li class="nav-item dropdown megamenu"><a id="megamneu" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle font-weight-bold text-uppercase" style="color: rgba(255, 255, 255, 0.7);">Products</a>
 		        <div aria-labelledby="megamneu" class="dropdown-menu border-0 p-0 m-0">
 		          <div class="container">
@@ -87,39 +151,42 @@
 		                <div class="p-4">
 		                  <div class="row">
 		                    <div class="col-lg-3 mb-4">
-		                      <h6 class="font-weight-bold text-uppercase">MegaMenu heading</h6>
+		                      <h6 class="font-weight-bold text-uppercase">Motorized Products</h6>
 		                      <ul class="list-unstyled">
-		                        <li class="nav-megamenu"><a href="products.html" class="nav-link text-small pb-0" style="color:gray">Unique Features</a></li>
-		                        <li class="nav-megamenu"><a href="products.html" class="nav-link text-small pb-0 ">Image Responsive</a></li>
-		                        <li class="nav-megamenu"><a href="products.html" class="nav-link text-small pb-0 ">Auto Carousel</a></li>
-		                        <li class="nav-megamenu"><a href="products.html" class="nav-link text-small pb-0 ">Newsletter Form</a></li>
+		                        <li class="nav-megamenu"><a href="products.html" class="nav-link text-small pb-0">Motorized Roller Blind</a></li>
+		                        <li class="nav-megamenu"><a href="products.html" class="nav-link text-small pb-0 ">Motorized Curtain Track</a></li>
+		                        <li class="nav-megamenu"><a href="products.html" class="nav-link text-small pb-0 ">Motorized Horizontal Blind</a></li>
+		                        <li class="nav-megamenu"><a href="products.html" class="nav-link text-small pb-0 ">Motorized Wooden Blind</a></li>
 		                      </ul>
 		                    </div>
 		                    <div class="col-lg-3 mb-4">
-		                      <h6 class="font-weight-bold text-uppercase">MegaMenu heading</h6>
+		                      <h6 class="font-weight-bold text-uppercase">Roller Blind Products</h6>
 		                      <ul class="list-unstyled">
-		                        <li class="nav-megamenu"><a href="products.html" class="nav-link text-small pb-0 ">Unique Features</a></li>
-		                        <li class="nav-megamenu"><a href="products.html" class="nav-link text-small pb-0 ">Image Responsive</a></li>
-		                        <li class="nav-megamenu"><a href="products.html" class="nav-link text-small pb-0 ">Auto Carousel</a></li>
-		                        <li class="nav-megamenu"><a href="products.html" class="nav-link text-small pb-0 ">Newsletter Form</a></li>
+		                        <li class="nav-megamenu"><a href="products.html" class="nav-link text-small pb-0 ">Horizontal Blind</a></li>
+		                        <li class="nav-megamenu"><a href="products.html" class="nav-link text-small pb-0 ">Wooden Blind</a></li>
+		                        <li class="nav-megamenu"><a href="products.html" class="nav-link text-small pb-0 ">Vertical Blind</a></li>
+		                        <li class="nav-megamenu"><a href="products.html" class="nav-link text-small pb-0 ">Shangri-La Blind</a></li>
+                            <li class="nav-megamenu"><a href="products.html" class="nav-link text-small pb-0 ">Seven Folding Blind</a></li>
+                            <li class="nav-megamenu"><a href="products.html" class="nav-link text-small pb-0 ">Jacquard Blind</a></li>
+                            <li class="nav-megamenu"><a href="products.html" class="nav-link text-small pb-0 ">Roller Roman Blind</a></li>
+                            <li class="nav-megamenu"><a href="products.html" class="nav-link text-small pb-0 ">Roller Blind</a></li>
+                            <li class="nav-megamenu"><a href="products.html" class="nav-link text-small pb-0 ">Roman Shade</a></li>
 		                      </ul>
 		                    </div>
 		                    <div class="col-lg-3 mb-4">
-		                      <h6 class="font-weight-bold text-uppercase">MegaMenu heading</h6>
+		                      <h6 class="font-weight-bold text-uppercase">Curtain Products</h6>
 		                      <ul class="list-unstyled">
-		                        <li class="nav-megamenu"><a href="products.html" class="nav-link text-small pb-0 ">Unique Features</a></li>
-		                        <li class="nav-megamenu"><a href="products.html" class="nav-link text-small pb-0 ">Image Responsive</a></li>
-		                        <li class="nav-megamenu"><a href="products.html" class="nav-link text-small pb-0 ">Auto Carousel</a></li>
-		                        <li class="nav-megamenu"><a href="products.html" class="nav-link text-small pb-0 ">Newsletter Form</a></li>
+		                        <li class="nav-megamenu"><a href="products.html" class="nav-link text-small pb-0 ">Gorden Smoke Ring</a></li>
+		                        <li class="nav-megamenu"><a href="products.html" class="nav-link text-small pb-0 ">Gorden Roman Shade</a></li>
+		                        <li class="nav-megamenu"><a href="products.html" class="nav-link text-small pb-0 ">Gorden Classic</a></li>
+		                        <li class="nav-megamenu"><a href="products.html" class="nav-link text-small pb-0 ">Gorden Minimalis</a></li>
 		                      </ul>
 		                    </div>
 		                    <div class="col-lg-3 mb-4">
-		                      <h6 class="font-weight-bold text-uppercase">MegaMenu heading</h6>
+		                      <h6 class="font-weight-bold text-uppercase">Folding Door & Kasa Nyamuk</h6>
 		                      <ul class="list-unstyled">
-		                        <li class="nav-megamenu"><a href="products.html" class="nav-link text-small pb-0 ">Unique Features</a></li>
-		                        <li class="nav-megamenu"><a href="products.html" class="nav-link text-small pb-0 ">Image Responsive</a></li>
-		                        <li class="nav-megamenu"><a href="products.html" class="nav-link text-small pb-0 ">Auto Carousel</a></li>
-		                        <li class="nav-megamenu"><a href="products.html" class="nav-link text-small pb-0 ">Newsletter Form</a></li>
+		                        <li class="nav-megamenu"><a href="products.html" class="nav-link text-small pb-0 ">Folding Door</a></li>
+		                        <li class="nav-megamenu"><a href="products.html" class="nav-link text-small pb-0 ">Kasa Nyamuk</a></li>
 		                      </ul>
 		                    </div>
 		                  </div>
@@ -130,6 +197,7 @@
 		          </div>
 		        </div>
 		      </li>
+          <li class="nav-item"><a href="about.html" class="nav-link font-weight-bold text-uppercase" style="color: rgba(255, 255, 255, 0.7);">About Us</a></li>
 		    </ul>
 		  </div>
 		</nav>
@@ -138,7 +206,7 @@
   <section class="page-section clearfix">
     <div class="container">
       <div class="intro">
-        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="img/intro.jpg" alt="">
+        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="img/intro.png" alt="">
         <div class="intro-text left-0 text-center bg-faded p-5 rounded">
           <h2 class="section-heading mb-4">
             <span class="section-heading-upper">Fresh Coffee</span>
@@ -170,27 +238,27 @@
           <div class="carousel-item active">
             <center>
               <div class="polaroid">
-                <img src="img/calendar-potrait.png" alt="5 Terre" style="width:100% ;height: 85%">
+                <img src="img/Motorized-Roller-Blind.jpg" alt="5 Terre">
                 <div class="container-polaroid">
-                <p>Electric Horizontal Blind</p>
+                <p>Motorize Roller Blind</p>
                 </div>
               </div>
               <div class="polaroid">
-                <img src="img/calendar-potrait.png" alt="5 Terre" style="width:100% ;height: 85%">
+                <img src="img/Motorized-Horizontal-Blind.jpg" alt="5 Terre">
                 <div class="container-polaroid">
-                <p>Electric Roller Blind</p>
+                <p>Motorize Horizontal Blind</p>
                 </div>
               </div>
               <div class="polaroid">
-                <img src="img/calendar-potrait.png" alt="5 Terre" style="width:100% ;height: 85%">
+                <img src="img/motorized-curtain-track.png" alt="5 Terre">
                 <div class="container-polaroid">
-                <p>Cinque Terre</p>
+                <p>Motorize Curtain Track</p>
                 </div>
               </div>
               <div class="polaroid">
-                <img src="img/calendar-potrait.png" alt="5 Terre" style="width:100% ;height: 85%">
+                <img src="img/Horizontal-Blind.jpg" alt="5 Terre">
                 <div class="container-polaroid">
-                <p>Cinque Terre</p>
+                <p>Horizontal Blind</p>
                 </div>
               </div>
             </center>
@@ -200,27 +268,29 @@
           <div class="carousel-item">
             <center>
               <div class="polaroid">
-                <img src="img/calendar-potrait.png" alt="5 Terre" style="width:100% ;height: 85%">
+                <img src="img/wooden-blinds.jpg" alt="5 Terre">
                 <div class="container-polaroid">
-                <p>Electric Horizontal Blind</p>
+                <p>Wooden Blind</p>
+                
                 </div>
               </div>
               <div class="polaroid">
-                <img src="img/calendar-potrait.png" alt="5 Terre" style="width:100% ;height: 85%">
+                <img src="img/vertical blind.png" alt="5 Terre">
                 <div class="container-polaroid">
-                <p>Electric Roller Blind</p>
+                <p>Vertical Blind</p>
+                
                 </div>
               </div>
               <div class="polaroid">
-                <img src="img/calendar-potrait.png" alt="5 Terre" style="width:100% ;height: 85%">
+                <img src="img/folding door.jpg" alt="5 Terre">
                 <div class="container-polaroid">
-                <p>Cinque Terre</p>
+                <p>Folding Door</p>
                 </div>
               </div>
               <div class="polaroid">
-                <img src="img/calendar-potrait.png" alt="5 Terre" style="width:100% ;height: 85%">
+                <img src="img/Seven-Folding.jpg" alt="5 Terre">
                 <div class="container-polaroid">
-                <p>Cinque Terre</p>
+                <p>Seven Folding Blind</p>
                 </div>
               </div>
             </center>
@@ -230,27 +300,27 @@
           <div class="carousel-item">
             <center>
               <div class="polaroid">
-                <img src="img/calendar-potrait.png" alt="5 Terre" style="width:100% ;height: 85%">
+                <img src="img/Jacquard Blind.jpg" alt="5 Terre">
                 <div class="container-polaroid">
-                <p>Electric Horizontal Blind</p>
+                <p>Jacquard Blind</p>
                 </div>
               </div>
               <div class="polaroid">
-                <img src="img/calendar-potrait.png" alt="5 Terre" style="width:100% ;height: 85%">
+                <img src="img/roman shade.jpg" alt="5 Terre">
                 <div class="container-polaroid">
-                <p>Electric Roller Blind</p>
+                <p>Roman Shade</p>
                 </div>
               </div>
               <div class="polaroid">
-                <img src="img/calendar-potrait.png" alt="5 Terre" style="width:100% ;height: 85%">
+                <img src="img/roller blind.png" alt="5 Terre">
                 <div class="container-polaroid">
-                <p>Cinque Terre</p>
+                <p>Roller Blind</p>
                 </div>
               </div>
               <div class="polaroid">
-                <img src="img/calendar-potrait.png" alt="5 Terre" style="width:100% ;height: 85%">
+                <img src="img/Kasa Nyamuk.jpg" alt="5 Terre">
                 <div class="container-polaroid">
-                <p>Cinque Terre</p>
+                <p>Kasa Nyamuk</p>
                 </div>
               </div>
             </center>
